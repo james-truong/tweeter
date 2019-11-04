@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
+
 
 
   <!-- External JS -->
@@ -24,7 +26,8 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <span class="title">tweeter</span>
+    <span class="welcome">Write a new Tweet</span>
   </nav>
   <header>
     <div>
@@ -37,7 +40,14 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="POST" enctype="application/x-www-form-urlencoded">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input class="button" type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
   </main>
 </body>
 

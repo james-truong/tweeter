@@ -1,0 +1,24 @@
+
+form textarea {
+  background-color: #f4f1ec;
+  width: 100%;
+  border-width: 0 0 4px 0;
+  font-weight:bold;
+}
+
+input[type=submit] {
+  background-color: #4056A1;
+  color:white;
+  font-family: 'Bungee', sans-serif;
+  float:left;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', sans-serif;
+
+}
+
+form{
+  padding-bottom: 2em;
+}

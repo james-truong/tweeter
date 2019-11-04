@@ -10,3 +10,16 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
+
+.title{
+  position: absolute;
+  top: 1em;
+  left: 5%;
+}
+
+.welcome{
+  position: absolute;
+  top: 1em;
+  right: 5%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
