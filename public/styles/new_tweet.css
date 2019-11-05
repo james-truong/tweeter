@@ -30,6 +30,38 @@ form {
     border-width: 3px;
 }
 
+article {
+    border: solid #000;
+    border-width: 4px 4px 4px 4px;
+    margin: 3px 3px 3px 3px;
+}
+
+article:hover {
+    box-shadow: 10px 10px 5px rgb(179, 161, 223);
+    /* font-weight: bold; */
+}
+
+article:hover .daysAgo {
+    font-weight: bold;
+}
+
+article:hover header span {
+    display: inline-block;
+    color: rgb(179, 161, 223);
+}
+
+article:hover header img {
+    zoom: 110%;
+}
+
+article:hover header h2 {
+    font-weight: bold;
+}
+
+article>header>h2 {
+    font-weight: lighter;
+}
+
 article>header {
     width: 100%;
     height: 58px;
@@ -53,10 +85,14 @@ article>header>span {
     float: right;
     margin: 0;
     padding: 5px 5px 0 0;
+    display: none;
 }
 
 article .body {
-    font-weight: bold;
+    border: solid #000;
+    border-width: 0 0 4px 0;
+    width: 98%;
+    margin: 0 auto;
 }
 
 article>div {
@@ -64,14 +100,11 @@ article>div {
     padding: 30px 15px;
 }
 
-article>header>div {
-    font-weight: bold;
-}
-
 article>footer {
     width: 100%;
     height: 35px;
     padding: 10px;
+    margin: 10px
 }
 
 article>footer>span {
@@ -81,17 +114,26 @@ article>footer>span {
 
 .options {
     float: right;
-    display: none;
+    padding-right: 5px;
 }
 
 .options span {
-    padding: 3px;
+    padding: 5px;
+    letter-spacing: .1em;
+    transition: text-shadow .3s;
 }
 
-article:hover .options {
-    display: inline;
+.options:hover {
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+    font-weight: light;
 }
+
+
+/* article:hover .options {
+    display: inline;
+} */
 
 .likes {
     float: right;
+    padding-right: 10px;
 }
