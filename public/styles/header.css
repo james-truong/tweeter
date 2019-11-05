@@ -1,20 +1,14 @@
-
 /* The header should have a height of 400px and be 100% the width of it's parent container
 The avatar should be centered vertically and horizontally (Hint: you may have to play around with position: relative and position: absolute to properly position the avatar)
 The name should be centered below the avatar
 **/
+
 header {
-  height: 400px;
-  width: 100%;
-  background-color: #ed8e00;
-  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
-  position: relative;
-  top: 120px;
-  color: white;
+    height: 400px;
+    width: 100%;
+    background-color: #ed8e00;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    position: relative;
+    top: 120px;
+    color: white;
 }
-
-
-
-
-
-

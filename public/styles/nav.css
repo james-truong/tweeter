@@ -1,25 +1,25 @@
 nav {
-  position: fixed;
-  height: 120px;
-  width: 100%;
-  z-index: 1;
-  background-color: #4056A1;
-  color: #FFFFFF;
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    z-index: 1;
+    background-color: #4056A1;
+    color: #FFFFFF;
 }
 
 nav span {
-  font-family: 'Bungee', sans-serif;
+    font-family: 'Bungee', sans-serif;
 }
 
-.title{
-  position: absolute;
-  top: 1em;
-  left: 5%;
+.title {
+    position: absolute;
+    top: 1em;
+    left: 5%;
 }
 
-.welcome{
-  position: absolute;
-  top: 1em;
-  right: 5%;
-  font-family: 'Source Sans Pro', sans-serif;
+.welcome {
+    position: absolute;
+    top: 1em;
+    right: 5%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
