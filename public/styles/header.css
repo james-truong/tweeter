@@ -3,7 +3,7 @@ The avatar should be centered vertically and horizontally (Hint: you may have to
 The name should be centered below the avatar
 **/
 
-header {
+.main-header {
     height: 400px;
     width: 100%;
     background-color: #ed8e00;

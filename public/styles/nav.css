@@ -5,6 +5,9 @@ nav {
     z-index: 1;
     background-color: #4056A1;
     color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
 }
 
 nav span {
@@ -12,13 +15,11 @@ nav span {
 }
 
 .title {
-    position: absolute;
     top: 1em;
     left: 5%;
 }
 
 .welcome {
-    position: absolute;
     top: 1em;
     right: 5%;
     font-family: 'Source Sans Pro', sans-serif;
