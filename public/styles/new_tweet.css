@@ -37,8 +37,8 @@ article {
 }
 
 article:hover {
-    box-shadow: 10px 10px 5px rgb(179, 161, 223);
-    /* font-weight: bold; */
+    box-shadow: 10px 10px 5px #4056A1;
+    font-weight: bold;
 }
 
 article:hover .daysAgo {
@@ -47,7 +47,7 @@ article:hover .daysAgo {
 
 article:hover header span {
     display: inline-block;
-    color: rgb(179, 161, 223);
+    color: #4056A1;
 }
 
 article:hover header img {
