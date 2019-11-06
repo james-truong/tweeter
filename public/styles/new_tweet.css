@@ -3,6 +3,7 @@ form textarea {
     width: 100%;
     border-width: 0 0 4px 0;
     font-weight: bold;
+    padding-top: 25px;
 }
 
 input[type=submit] {
@@ -28,6 +29,11 @@ form {
 .new-tweet {
     border: black;
     border-width: 3px;
+    padding-top: 25px;
+}
+
+.new-tweet form {
+    display: none;
 }
 
 article {

@@ -30,7 +30,15 @@
     <!-- Top nav bar (fixed) -->
     <nav>
         <span class="title">tweeter</span>
-        <span class="welcome"><strong>Write</strong> a new Tweet</span>
+        <div>
+            <span class="welcome"><strong class="Write">Write</strong> a new Tweet</span>
+            <a><i class="fa fa-arrow-circle-down"></i></a>
+        </div>
+
+
+
+
+
     </nav>
     <header class="main-header">
         <div>
@@ -44,7 +52,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-            <h2>Compose Tweet</h2>
             <form action="/tweets/" method="POST" enctype="application/x-www-form-urlencoded">
                 <textarea name="text" placeholder="What are you humming about?"></textarea>
                 <p id="message"></p>

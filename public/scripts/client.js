@@ -16,6 +16,11 @@ const renderTweets = (tweets) => {
     }
 
 }
+const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
 
 function createTweetElement(data) {
     $dateCreated = new Date(data.created_at);
@@ -29,7 +34,7 @@ function createTweetElement(data) {
         `<h2>${data.user.name}</h2>` +
         `<span>${data.user.handle}</span>` +
         `</header>` +
-        `<div class="body">${data.content.text}</div>` +
+        `<div class="body">${escape(data.content.text)}</div>` +
         `<footer>` +
         `<span class="daysAgo">${$diffDays} days ago</span>` +
         `<div class="options">` +
@@ -42,43 +47,6 @@ function createTweetElement(data) {
     $('#tweets-container').prepend($tweet);
 }
 
-$("#add").on("click", function(event) {
-
-    //prevent to change the page
-    event.preventDefault();
-
-    //get data from the form
-    $textarea = $(this).closest("form").find("textarea");
-    $message = $(this).closest("form").find("#message");
-    $counter = $(this).closest("form").find(".counter");
-    $data = $textarea.serialize();
-
-    $text = $textarea.val().trim();
-    $textLength = $text.length;
-
-
-    if ($text === "" || $text === null) {
-        $message.text("Your message is empty!").toggle(true);
-        $textarea.focus();
-
-    } else if ($textLength > 140) {
-        $message.text("Your message is too long!").toggle(true);
-        $textarea.focus();
-
-    } else {
-        // proceed as normally
-        $.post("/tweets/", $data)
-            .done(function() {
-                loadTweets();
-            });
-
-        //hidden the message if it is shown, clear the textarea, and reset the char-counter
-        $message.text("").toggle(false);
-        $textarea.val("").focus();
-        $counter.text("140");
-    }
-
-});
 
 $(document).ready(function() {
     function loadTweets() {
@@ -96,9 +64,12 @@ $(document).ready(function() {
         $textarea = $(this).closest("form").find("textarea");
         $message = $(this).closest("form").find("#message");
         $counter = $(this).closest("form").find(".counter");
+
         $data = $textarea.serialize();
 
+
         $text = $textarea.val().trim();
+
         $textLength = $text.length;
 
 
@@ -127,4 +98,9 @@ $(document).ready(function() {
 
     loadTweets();
     // Test / driver code (temporary)
+    $(".fa-arrow-circle-down").click(function() {
+        $(".new-tweet form").slideToggle(500, function() {
+            $(".new-tweet form textarea").focus();
+        });
+    });
 });
