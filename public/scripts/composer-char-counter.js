@@ -25,10 +25,11 @@ $(document).ready(function() {
         });
     });
 
-    var btn = $('.fa-angle-double-up');
-
+    let btn = $('.fa-angle-double-up');
+    let nav = $("body>nav");
+    let header = $(".main-header");
     $(window).scroll(function() {
-        if ($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > nav.outerHeight() + header.height()) {
             btn.addClass('show');
             $("nav div").addClass('hide')
         } else {
