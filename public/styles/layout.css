@@ -79,6 +79,23 @@ main {
     visibility: visible;
 }
 
+.fa-arrow-circle-down::before {
+    animation: movedown 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes movedown {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    30% {
+        transform: translate(0px, 12px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
 div .body {
     text-align: none;
 }
