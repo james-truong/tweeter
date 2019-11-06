@@ -29,7 +29,6 @@ form {
 .new-tweet {
     border: black;
     border-width: 3px;
-    padding-top: 25px;
 }
 
 .new-tweet form {
@@ -39,7 +38,8 @@ form {
 article {
     border: solid #000;
     border-width: 4px 4px 4px 4px;
-    margin: 3px 3px 3px 3px;
+    padding: 3px 35px 3px 3px;
+    margin-bottom: 15px;
 }
 
 article:hover {
@@ -142,4 +142,14 @@ article>footer>span {
 .likes {
     float: right;
     padding-right: 10px;
+}
+
+#message {
+    display: none;
+    color: red;
+}
+
+#message .highlight::after {
+    color: red;
+    border: solid;
 }

@@ -1,7 +1,7 @@
 // Function that update the character counter
 $(document).ready(function() {
 
-    $(".new-tweet").on("keydown keyup", "textarea", function(event) {
+    $(".new-tweet").on("input", "textarea", function(event) {
         $text = $(this).val();
         $charsLeft = 140 - $text.length;
 

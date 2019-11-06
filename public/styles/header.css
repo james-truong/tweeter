@@ -6,9 +6,8 @@ The name should be centered below the avatar
 .main-header {
     height: 400px;
     width: 100%;
-    background-color: #ed8e00;
+    background-color: #ec9b18;
     background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
     position: relative;
-    top: 120px;
     color: white;
 }

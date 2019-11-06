@@ -48,6 +48,8 @@ function createTweetElement(data) {
 }
 
 
+
+
 $(document).ready(function() {
     function loadTweets() {
         $.ajax('/tweets', { method: 'GET' })
@@ -72,13 +74,22 @@ $(document).ready(function() {
 
         $textLength = $text.length;
 
+        let showFlash = function(message) {
+            jQuery('#message').html(message);
+            jQuery('#message').toggleClass('highlight');
+            jQuery('#message').slideDown('slow');
+            jQuery('#message').click(function() {
+                $('#message').toggle('highlight');
+            });
+        };
 
         if ($text === "" || $text === null) {
-            $message.text("Your message is empty!").toggle(true);
+            showFlash("🚨Your message is empty!🚨");
             $textarea.focus();
 
-        } else if ($textLength > 140) {
-            $message.text("Your message is too long!").toggle(true);
+        } else
+        if ($textLength > 140) {
+            showFlash("🚨 Your message is too long! 🚨")
             $textarea.focus();
 
         } else {
@@ -89,7 +100,7 @@ $(document).ready(function() {
                 });
 
             //hidden the message if it is shown, clear the textarea, and reset the char-counter
-            $message.text("").toggle(false);
+            $message.text("").slideToggle(false);
             $textarea.val("").focus();
             $counter.text("140");
         }

@@ -25,6 +25,7 @@ body {
     font-size: 24px;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
+    word-break: break-all;
 }
 
 main {
@@ -39,6 +40,7 @@ main {
     width: 50px;
     height: 50px;
     text-align: center;
+    font-size: 45px;
     border-radius: 30px;
     position: fixed;
     bottom: 30px;
@@ -57,7 +59,7 @@ main {
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
-    font-size: 2em;
+    font-size: 4em;
     line-height: 50px;
     color: #fff;
 }
@@ -68,7 +70,7 @@ main {
 }
 
 .fa-angle-double-up:active {
-    background-color: #555;
+    background-color: rgb(255, 255, 255);
 }
 
 .fa-angle-double-up.show,
@@ -77,7 +79,75 @@ main {
     visibility: visible;
 }
 
+div .body {
+    text-align: none;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+/* Another tablet breakpoint is maximum width of 1024px */
+
+@media only screen and (min-width: 1024px) {
+    /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
+    body {
+        display: flex;
+    }
+    .main-header {
+        flex: 1;
+        margin: 35px;
+        margin-right: 150px;
+        margin-top: 100px;
+        top: 140px;
+    }
+    .container {
+        flex: 1.5;
+    }
+    .new-tweet {
+        padding-top: 110px;
+    }
+    #tweets-container {
+        padding-right: 25px;
+    }
+    form {
+        margin-right: 25px;
+    }
+    nav {
+        background-color: #4056A1;
+    }
+}
+
+
+/* Another tablet breakpoint is maximum width of 1024px */
+
+@media only screen and (max-width: 1024px) {
+    /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header {
+        width: 100%;
+        top: 120px;
+    }
+    .container {
+        width: 100%;
+    }
+    .new-tweet {
+        padding-top: 60px;
+    }
+    #tweets-container {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    nav {
+        background-color: #ec9b18;
+        background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    }
+    form {
+        margin: 0 25px;
+    }
+}
