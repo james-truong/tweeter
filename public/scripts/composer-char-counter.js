@@ -19,4 +19,24 @@ $(document).ready(function() {
 
     });
 
+    $(".fa-arrow-circle-down").click(function() {
+        $(".new-tweet form").slideToggle(500, function() {
+            $(".new-tweet form textarea").focus();
+        });
+    });
+
+    var btn = $('.fa-angle-double-up');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '300');
+    });
 });

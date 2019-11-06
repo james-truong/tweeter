@@ -33,6 +33,49 @@ main {
     margin-top: 120px;
 }
 
+.fa-angle-double-up {
+    display: inline-block;
+    background-color: rgb(235, 95, 52);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.fa-angle-double-up:hover {
+    color: white;
+}
+
+.fa-angle-double-up::after {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+.fa-angle-double-up:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.fa-angle-double-up:active {
+    background-color: #555;
+}
+
+.fa-angle-double-up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

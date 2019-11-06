@@ -98,9 +98,5 @@ $(document).ready(function() {
 
     loadTweets();
     // Test / driver code (temporary)
-    $(".fa-arrow-circle-down").click(function() {
-        $(".new-tweet form").slideToggle(500, function() {
-            $(".new-tweet form textarea").focus();
-        });
-    });
+
 });
