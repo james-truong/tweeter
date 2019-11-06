@@ -30,13 +30,19 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
             btn.addClass('show');
+            $("nav div").addClass('hide')
         } else {
             btn.removeClass('show');
+            $("nav div").removeClass('hide')
+
         }
     });
 
     btn.on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, '300');
+        $(".new-tweet form").slideDown(500, function() {
+            $(".new-tweet form textarea").focus();
+        });
     });
 });

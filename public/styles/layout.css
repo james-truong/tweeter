@@ -71,7 +71,8 @@ main {
     background-color: #555;
 }
 
-.fa-angle-double-up.show {
+.fa-angle-double-up.show,
+.fa-arrow-circle-down.show {
     opacity: 1;
     visibility: visible;
 }

@@ -42,3 +42,8 @@ nav span {
     transition: transform 0.8s;
     transform: translate(0px, 15px);
 }
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
