@@ -113,6 +113,5 @@ $(document).ready(function() {
     });
 
     loadTweets();
-    // Test / driver code (temporary)
 
 });

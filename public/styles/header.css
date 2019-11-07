@@ -11,15 +11,3 @@ The name should be centered below the avatar
     position: relative;
     color: white;
 }
-
-@keyframes movedown {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    30% {
-        transform: translate(0px, 12px);
-    }
-    100% {
-        transform: translate(0px, 0px);
-    }
-}
