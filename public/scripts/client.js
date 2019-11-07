@@ -28,6 +28,11 @@ function createTweetElement(data) {
 
     $timeDiff = Math.abs($dateToday.getTime() - $dateCreated.getTime());
     $diffDays = Math.ceil($timeDiff / (1000 * 3600 * 24));
+    if ($diffDays <= 1) {
+        $day = "day";
+    } else {
+        $day = "days"
+    }
     $tweet = (`<article>` +
         `<header>` +
         `<img src="${data.user.avatars}">` +
@@ -36,7 +41,7 @@ function createTweetElement(data) {
         `</header>` +
         `<div class="body">${escape(data.content.text)}</div>` +
         `<footer>` +
-        `<span class="daysAgo">${$diffDays} days ago</span>` +
+        `<span class="daysAgo">${$diffDays} ${$day} ago</span>` +
         `<div class="options">` +
         `<span><i class="fa fa-flag" aria-hidden="true"></i></span>` +
         `<span><i class="fa fa-retweet" aria-hidden="true"></i></span>` +
@@ -69,7 +74,7 @@ $(document).ready(function() {
 
         $data = $textarea.serialize();
 
-
+        console.log($textarea.val())
         $text = $textarea.val().trim();
 
         $textLength = $text.length;
